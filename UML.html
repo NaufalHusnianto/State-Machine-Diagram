@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>State Machine Diagram</title>
+    <link rel="stylesheet" href="UML.css">
+
+    <style>
+        h4 ul {
+            list-style-position: outside;
+        }
+       
+    </style>
+    
+</head>
+<body>
+    <nav>
+        <div class="wrapper">
+            <div class="logo"><a href=''>State Machine</a></div>
+            <div class="menu">
+                <ul class="nav-ul">
+                    <li><a href="#home">Awal</a></li>
+                    <li><a href="#diagram dan penjelasan">Diagram dan Penjelasan</a></li>
+                    <li><a href="#scenario">Skenario</a></li>
+                    <li><a href="#team">Anggota</a></li>
+                    <li><a href="#end">Akhir</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="wrapper">
+        <!-- untuk awal -->
+        <section id="home">
+            <img src="https://img.freepik.com/free-vector/web-development-programmer-engineering-coding-website-augmented-reality-interface-screens-developer-project-engineer-programming-software-application-design-cartoon-illustration_107791-3863.jpg?size=626&ext=jpg&ga=GA1.2.1769275626.1605867161"/>
+            <div class="kolom">
+                <p class="deskripsi">A. Definisi dan Fungsi</p>
+                <h4>Definisi</h4>
+                    <p>State Machine Diagram adalah sebuah simbol 
+                    yang menggambarkan perubahan atau transisi keadaan 
+                    dari suatu status ke status lainnya 
+                    sebagai bentuk respon terhadap suatu peristiwa atau stimulan. </p>
+                <h4>Fungsi</h4>
+                    <p>State Machine Diagram berfungsi untuk 
+                    memodelkan metode atau behavior sebuah objek 
+                    dengan menunjukkan urutan kejadian sesaat (status) yang dilewati 
+                    sebuah objek saat terjadinya transisi.</p>
+                </div>
+        </section>
+
+        <!-- untuk diagram dan penjelasan -->
+        <section id="diagram dan penjelasan">
+            <div class="kolom">
+                <p class="deskripsi">B. Diagram dan Penjelasan Notasi/Komponen</p>
+                <h4>1. State</h4>
+                    <p>State adalah sebuah kondisi ketika objek berada dalam kondisi tertentu, 
+                        melakukan beberapa aksi, atau menunggu sebuah event.</p>
+
+                <h4>2. Transisi</h4>
+                    <p>Transisi adalah suatu skenario merepresentasikan satu jalur 
+                        yang melewati sebuah state transition diagram. 
+                        Label pada transition bisa terdiri dari tiga bagian (opsional): </p>
+                    <ul id="ul-mid">
+                        <b><li>Trigger (Pemicu)</li></b>
+                        <p>Kejadian atau kondisi yang menyebabkan perpindahan state.</p>
+                        <b><li>Guard (Penjaga)</li></b>
+                        <p>Kondisi tambahan yang harus dipenuhi sebelum berpindah state (opsional).</p>
+                        <b><li>Activity (Aktivitas)</li></b>
+                        <p>Aksi yang dilakukan sistem selama perpindahan state (opsional).</p>
+                    </ul>
+
+                    <img src="TGA.png" alt="Trigger, Guard, Activity">
+
+                <h4>3. Start State dan Final State</h4>
+                    <p>Start state adalah keadaan awal dari objek. 
+                        Final State adalah keadaan akhir dari objek yang menunjukkan 
+                        bahwa objek telah menyelesaikan jalannya.</p>
+
+                    <img src="Start and Final.png" alt="SF">
+            </div>
+        </section>
+
+        <!-- untuk skenario -->
+        <section id="scenario">
+                <div class="kolom">
+                    <p class="deskripsi">C. Contoh Skenario</p>
+                    <p>Mesin penjual minuman otomatis sederhana</p>
+                    <h4>State :</h4>
+                        <ul class="ul-bottom">
+                            <b><li>Start</li></b>
+                            <li><b>Siap Menerima Uang:</b> Pengguna memasukkan uang</li>
+                            <li><b>Menu Siap Dipilih:</b> Pengguna memilih minuman yang ingin dibeli.</li>
+                            <li><b>Final:</b> Transaksi Selesai</li>
+                        </ul>
+
+                    <img src="Skenario.png" alt="">
+
+                    <h4><b>Penjelasan:</b></h4>
+                    <ul class="ul-bottom">
+                        <li>Pengguna memasukkan uang di state "Siap Menerima Uang".</li>
+                        <li>Jika uang asli, uang akan dihitung lalu mesin akan beralih ke state "Menu Siap Dipilih" dan menampilkan daftar minuman.</li>
+                        <li>Jika uang kurang, pengguna dapat memasukkan uang lagi saat di state "Menu Siap Dipilih".</li>
+                        <li>Pengguna dapat memilih minuman di state "Menu Siap Dipilih".</li>
+                        <li>Jika uang cukup, mesin akan beralih ke state "Final" dan menyiapkan serta mengeluarkan minuman.</li>
+                        <li>Jika uang kurang, mesin akan tetap di state "Menu Siap Dipilih".</li>
+                        <li>Setelah transaksi selesai, mesin akan kembali ke state "Start".</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
+
+     <!-- untuk anggota -->
+     <section id="team">
+        <div class="tengah">
+            <div class="kolom">
+                <h2>Kelompok</h2>
+                <p class="deskripsi">Anggota</p>
+            </div>
+
+            <div class="list-anggota">
+                <div class="kartu-anggota">
+                    <img src="Ardian.jpeg"/>
+                    <p>Ardian Rangga Pangestu<br>(K3522009)</p>
+                </div>
+                <div class="kartu-anggota">
+                    <img src="Candra.jpeg"/>
+                    <p>Candra Zulkarnain<br>(K3522015)</p>
+                </div>
+                <div class="kartu-anggota">
+                    <img src="Naufal.jpg"/>
+                    <p>Naufal Husnianto<br>(K3522055)</p>
+                </div>
+                <div class="kartu-anggota">
+                    <img src="Raditya.jpeg"/>
+                    <p>Raditya Dwi Anggara<br>(K3522063)</p>
+                </div>
+                <div class="kartu-anggota">
+                    <img src="Cesare.jpeg"/>
+                    <p>Septian Cesare Arden<br>(K3522077)</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="end">
+        <div class="wrapper">
+            <div class="footer">
+                <div class="footer-section">
+                    <h2>Terima Kasih!!!</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="copyright">
+        <div class="wrapper">
+            &copy; 2024. <b>Karunia Jaya Tech.</b> All Rights Reserved.
+        </div>
+    </div>
+    
+</body>
+</html>
